@@ -1,0 +1,11 @@
+﻿DEFINE TABLE ZP_MATERIAL CLIENT DEPENDENT AS
+{
+  KEY MATNR : TYPE MATNR;
+      MAKTX : TYPE MAKTX;
+      MTART : TYPE MTART;
+      MATKL : TYPE MATKL;
+      MEINS : TYPE MEINS;
+      LVORM : TYPE LVORM;
+}
+// 本地草稿(L1)：物料主数据报表底表；全部引用标准数据元素，无新建域/DTEL
+// MANDT 随 CLIENT DEPENDENT 隐式生成；字段存在性待连系统核实(见 verification_backlog)
