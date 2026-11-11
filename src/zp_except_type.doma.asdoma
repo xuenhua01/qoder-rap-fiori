@@ -1,0 +1,9 @@
+﻿DEFINE DOMAIN ZP_EXCEPT_TYPE AS
+{
+  TYPE CHAR4;
+  VALUE 01 IF '设备异常';
+  VALUE 02 IF '质量异常';
+  VALUE 03 IF '物料异常';
+  VALUE 04 IF '人员异常';
+}
+// 本地草稿(L1)：DDL 语法待连系统 Activate 时校验

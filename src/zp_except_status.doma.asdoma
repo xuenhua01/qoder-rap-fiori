@@ -1,0 +1,8 @@
+﻿DEFINE DOMAIN ZP_EXCEPT_STATUS AS
+{
+  TYPE CHAR1;
+  VALUE 1 IF 'OPEN';
+  VALUE 2 IF 'IN_PROGRESS';
+  VALUE 3 IF 'CLOSED';
+}
+// 本地草稿(L1)：DDL 语法待连系统 Activate 时校验
