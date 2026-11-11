@@ -6,6 +6,6 @@
 | # | 对象 | 存疑假设 | 如何核实 | 状态 |
 |---|------|---------|---------|------|
 | B-01 | `ZP_MATERIAL` | 透明表 DDL 语法（`DEFINE TABLE ... CLIENT DEPENDENT`）在本系统 ADT 是否支持直接粘贴 | ADT 建表试粘 DDL 源；不支持则 DDIC 表单编辑器手填 | OPEN |
-| B-02 | 标准数据元素 | `MATNR`/`MAKTX`/`MTART`/`MATKL`/`MEINS`/`LVORM` 在本系统确实存在 | 连系统 `ddic_element`(DTEL) 批量核实（本次连接超时未验） | OPEN |
-| B-03 | 命名冲突 | `ZP_MATERIAL` 是否已被占用 | 连系统 `abap_object_info`(TABL)，Z 对象应"不存在"才可建 | OPEN |
+| B-02 | 标准数据元素 | `MATNR`/`MAKTX`/`MTART`/`MATKL`/`MEINS`/`LVORM` 存在 | `abap_object_info`(DTEL) 逐个核实：全部 responsible=SAP、active/partlyActive | VERIFIED (2026-11-11) |
+| B-03 | 命名冲突 | `ZP_MATERIAL` 是否已被占用 | `abap_object_info`(TABL) 返回 object not found → 无冲突可新建 | VERIFIED (2026-11-11) |
 | B-04 | 包落点 | 对象建到哪个包（`ZXUENHUA` 建包失败，暂用 `ZAIXUENHUA`/`ZAITEMP` 待定） | 确认目标包 + 传输请求 | OPEN |
